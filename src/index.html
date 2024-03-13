@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"/>
+    <title>Filtro de CPF</title>
+</head>
+<body>
+    <h2>Filtro de CPF</h2>
+    <label for="cpfInput">Digite o CPF:</label>
+    <input type="text" id="cpfInput" maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="Digite o CPF ou CNPJ">
+    <button onclick="filtrarCPF()">Filtrar</button>
+    <div id="cpfFiltrado"></div>
+    <script src="main.js"></script>
+</body>
+</html>
