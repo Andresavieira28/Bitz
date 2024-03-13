@@ -4,14 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css"/>
-    <title>Filtro de CPF</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Bitz</title>
 </head>
 <body>
-    <h2>Filtro de CPF</h2>
-    <label for="cpfInput">Digite o CPF:</label>
-    <input type="text" id="cpfInput" maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="Digite o CPF ou CNPJ">
-    <button onclick="filtrarCPF()">Filtrar</button>
-    <div id="cpfFiltrado"></div>
+    <header  class="container">
+        <div class="logo">
+            <img src="imagens/logo.png" alt="Logo do Bitz"/>
+        </div>
+        <div class="title">
+            <h1>Bitz - Bussines inteligence trade zendesk</h1>
+        </div>
+    </header>
+    <section>
+        <label for="cpfInput">Pesquisa:</label>
+        <input type="text" id="cpfInput" maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="Digite o CPF ou CNPJ">
+        <button onclick="filtrarCPF()">Filtrar</button>
+        <div id="cpfFiltrado"></div>
+    </section>
     <script src="main.js"></script>
 </body>
 </html>

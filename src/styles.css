@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: "Anonymous Pro", monospace;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.container {
+    display: flex;
+    background-color: rgb(184, 183, 183);/* Alinha os itens verticalmente no centro */
+}
+
+.logo{
+
+    align-items: left;
+}
+.title {
+    margin: auto;
+    color: white;
+    align-items: center;
+    justify-content: space-around;
+    width: 60%;
+    font-size: 12px;
+}
+
+section{
+    display: flex;
+    align-items: center;
+}
+
+label {
+    display: block;
+    margin: 10%;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+input[type="text"] {
+    width: 30%;
+    padding: 1%;
+    font-size: 15px;
+    border-radius: 3px;
+}
+
+button {
+    padding: 13px;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+    margin: 1%;
+    background-color: red;
+    border-radius: 3px;
+    border: none;
+}
