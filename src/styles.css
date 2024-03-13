@@ -28,6 +28,7 @@ body {
 section{
     display: flex;
     align-items: center;
+    margin: 1%;
 }
 
 label {
@@ -53,4 +54,28 @@ button {
     background-color: red;
     border-radius: 3px;
     border: none;
+}
+
+/* Estilo para dispositivos móveis */
+@media only screen and (max-width: 600px) {
+    .container {
+        flex-direction: column; /* Altera a direção do fluxo para coluna */
+    }
+    .title {
+        width: 100%; /* Define a largura total */
+        text-align: center; /* Centraliza o texto */
+        font-size: 18px; /* Ajusta o tamanho da fonte */
+    }
+    input[type="text"] {
+        width: 80%; /* Ajusta a largura do campo de entrada */
+        margin: 5px auto; /* Centraliza o campo de entrada */
+    }
+    button {
+        width: 80%; /* Ajusta a largura do botão */
+        margin: 5px auto; /* Centraliza o botão */
+    }
+    label {
+        font-size: 20px; /* Ajusta o tamanho do texto do rótulo */
+        text-align: center; /* Centraliza o texto do rótulo */
+    }
 }

@@ -1,3 +1,10 @@
+import data from "./data/cpf/cpf.js";
+import data from "./data/cnpj/cnpj.js";
+
+const charactersPrint = document.getElementById('lista');
+const fullcpf = data.cpf;
+const fullcnpj = data.cnpj;
+
 function filtrarCPF() {
     var cpfInput = document.getElementById('cpfInput').value;
     // Remove caracteres não numéricos do CPF
