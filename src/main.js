@@ -1,15 +1,43 @@
-import data from "./data/cpf/cpf.js";
-import data from "./data/cnpj/cnpj.js";
+const content = document.querySelector(".content");
+const inputSearch = document.querySelector("input[type='search']");
 
-const charactersPrint = document.getElementById('lista');
-const fullcpf = data.cpf;
-const fullcnpj = data.cnpj;
+let items = [];
 
-function filtrarCPF() {
-    var cpfInput = document.getElementById('cpfInput').value;
-    // Remove caracteres não numéricos do CPF
-    var cpfFiltrado = cpfInput.replace(/\D/g, '');
-    // Formata o CPF
-    cpfFiltrado = cpfFiltrado.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
-    document.getElementById('cpfFiltrado').textContent = cpfFiltrado;
+inputSearch.oninput = () => {
+  content.innerHTML = "";
+
+  items
+    .filter((item) =>
+      item.toLowerCase().includes(inputSearch.value.toLowerCase())
+    )
+    .forEach((item) => addHTML(item));
+};
+
+function addHTML(item) {
+  const div = document.createElement("div");
+  div.innerHTML = item;
+  content.append(div);
 }
+
+fetch("https://jsonplaceholder.typicode.com/users")
+  .then((data) => data.json())
+  .then((users) => {
+    users.forEach((user) => {
+        
+      addHTML(user.name);
+      addHTML(user.username);
+      addHTML(user.email);
+      addHTML(user.phone);
+      addHTML(user.website);
+      addHTML(user.company.name);
+      addHTML(user.company.catchPhrase);
+
+      items.push(user.name);
+      items.push(user.username);
+      items.push(user.email);
+      items.push(user.phone);
+      items.push(user.website);
+      console.log(items);
+    });
+    
+});

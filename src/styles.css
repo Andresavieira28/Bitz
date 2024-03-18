@@ -24,36 +24,21 @@ body {
     width: 60%;
     font-size: 12px;
 }
-
-section{
-    display: flex;
-    align-items: center;
-    margin: 1%;
+.conteudo-api {
+    max-width: 800px; /* Defina a largura máxima para o conteúdo */
+    margin: 0 auto; /* Centralize o conteúdo na página */
+    padding: 20px;
 }
 
-label {
-    display: block;
-    margin: 10%;
-    font-weight: bold;
-    font-size: 25px;
+.label {
+    display: block; /* Garante que a etiqueta de rótulo seja exibida em uma linha separada */
 }
 
-input[type="text"] {
-    width: 30%;
-    padding: 1%;
-    font-size: 15px;
-    border-radius: 3px;
-}
-
-button {
-    padding: 13px;
-    font-size: 15px;
-    color: white;
-    cursor: pointer;
-    margin: 1%;
-    background-color: red;
-    border-radius: 3px;
-    border: none;
+.search {
+    width: 100%; /* A largura do campo de pesquisa ocupará toda a largura disponível */
+    padding: 10px; /* Adiciona algum preenchimento ao campo de pesquisa */
+    box-sizing: border-box; /* Garante que o preenchimento não aumente a largura total */
+    margin-bottom: 10px; /* Adiciona um pequeno espaço entre o campo de pesquisa e o conteúdo abaixo */
 }
 
 /* Estilo para dispositivos móveis */
@@ -70,12 +55,14 @@ button {
         width: 80%; /* Ajusta a largura do campo de entrada */
         margin: 5px auto; /* Centraliza o campo de entrada */
     }
-    button {
-        width: 80%; /* Ajusta a largura do botão */
-        margin: 5px auto; /* Centraliza o botão */
-    }
     label {
         font-size: 20px; /* Ajusta o tamanho do texto do rótulo */
         text-align: center; /* Centraliza o texto do rótulo */
     }
+    .conteudo-api {
+        padding: 10px; /* Reduza o preenchimento para telas menores */
+    }
 }
+
+
+
