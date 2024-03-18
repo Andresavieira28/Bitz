@@ -9,25 +9,35 @@ body {
 
 .container {
     display: flex;
-    background-color: rgb(184, 183, 183);/* Alinha os itens verticalmente no centro */
-}
-
-.logo{
-
-    align-items: left;
-}
-.title {
-    margin: auto;
-    color: white;
+    justify-content: start;
     align-items: center;
-    justify-content: space-around;
-    width: 60%;
-    font-size: 12px;
+    background-color: rgb(176, 176, 176);
+    padding: 15px;
+}
+
+.logo img {
+    width: 100%; /* ajuste conforme necessário */
+    height: auto; /* para manter a proporção */
+}
+
+.title h1 {
+    margin: 0; /* remova margens padrão */
+    font-size: 1.5rem;
+    color: white; 
+    padding: 7%;/* ajuste conforme necessário */
+    width: 100%;
 }
 .conteudo-api {
-    max-width: 800px; /* Defina a largura máxima para o conteúdo */
-    margin: 0 auto; /* Centralize o conteúdo na página */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 80%; /* Defina a largura máxima para o conteúdo */
+    margin: 1% auto; /* Centralize o conteúdo na página */
     padding: 20px;
+    background-color: #f9f9f9; /* Adiciona uma cor de fundo */
+    border: 1px solid #ddd; /* Adiciona uma borda */
+    border-radius: 8px; /* Adiciona cantos arredondados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
 }
 
 .label {
@@ -35,11 +45,37 @@ body {
 }
 
 .search {
-    width: 100%; /* A largura do campo de pesquisa ocupará toda a largura disponível */
+    width: 80%; /* A largura do campo de pesquisa ocupará toda a largura disponível */
     padding: 10px; /* Adiciona algum preenchimento ao campo de pesquisa */
     box-sizing: border-box; /* Garante que o preenchimento não aumente a largura total */
     margin-bottom: 10px; /* Adiciona um pequeno espaço entre o campo de pesquisa e o conteúdo abaixo */
 }
+.button-refresh {
+    color: white;
+    background-color: red;
+    width: 20%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.button-refresh:hover {
+    background-color: darkred;
+}
+
+.content{
+    width: 80%;
+    margin: 1% auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 
 /* Estilo para dispositivos móveis */
 @media only screen and (max-width: 600px) {
