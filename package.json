@@ -1,42 +1,42 @@
 {
-  "type": "module",
   "name": "bitz",
   "version": "1.0.0",
-  "description": "bitz",
+  "description": "Bitz - Consulta histórica",
   "main": "src/index.html",
+  "keywords": [
+    "javascript",
+    "firebase",
+    "jest"
+  ],
+  "license": "MIT",
   "scripts": {
-    "htmlhint": "htmlhint src/*.html test/*.html",
+    "htmlhint": "htmlhint dist/*.html ",
     "eslint": "eslint --ext .js src/ test/",
-    "pretest": "npm run eslint && npm run htmlhint",
-    "test": "jest --verbose --coverage",
-    "open-coverage-report": "opener ./coverage/lcov-report/index.html",
-    "start": "serve ./src",
+    "stylelint": "stylelint --aei src/**/*.css",
+    "test": "jest --coverage",
+    "start": "serve -s src/",
     "deploy": "gh-pages -d src"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Andresavieira28/bitz.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Andresavieira28/bitz/issues"
-  },
-  "homepage": "https://github.com/Andresavieira28/bitz#readme",
-  "dependencies": {
-    "@babel/core": "^7.6.2",
-    "@babel/plugin-transform-modules-commonjs": "^7.6.0",
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
     "babel-jest": "^27.0.1",
     "eslint": "^8.3.0",
-    "gh-pages": "^6.1.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^25.3.0",
     "htmlhint": "^1.0.0",
     "jest": "^27.0.1",
-    "node": "^21.6.1",
-    "opener": "^1.5.1",
-    "serve": "^14.2.1"
+    "regenerator-runtime": "^0.13.1",
+    "serve": "^14.1.1",
+    "stylelint": "^14.1.0",
+    "stylelint-config-recommended": "^6.0.0"
   },
   "engines": {
     "node": ">=16.x"
+  },
+  "dependencies": {
+    "firebase": "^9.12.1",
+    "gh-pages": "^6.1.1"
   }
 }
