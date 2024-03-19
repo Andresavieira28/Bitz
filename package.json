@@ -5,11 +5,13 @@
   "description": "bitz",
   "main": "src/index.html",
   "scripts": {
-    "deploy": "gh-pages -d src",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "htmlhint": "htmlhint src/*.html test/*.html",
     "eslint": "eslint --ext .js src/ test/",
-    "start": "serve src/"
+    "pretest": "npm run eslint && npm run htmlhint",
+    "test": "jest --verbose --coverage",
+    "open-coverage-report": "opener ./coverage/lcov-report/index.html",
+    "start": "serve ./src",
+    "deploy": "gh-pages -d src"
   },
   "repository": {
     "type": "git",
