@@ -85,7 +85,16 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-
+.card {
+    width: 60%;;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgb(176, 176, 176);;
+    margin: 20px;
+  }
+  
 /* Estilo para dispositivos móveis */
 @media only screen and (max-width: 600px) {
     .container {
