@@ -17,13 +17,17 @@
         <div class="title">
             <h1>Bitz - Consulta Histórica</h1>
         </div>
+        <div>
+            <div id="currentDateTime"></div>
+        </div>
     </header>
     <div class="conteudo-api">
-        <label for="search">Pesquisa:</label>
+        <label for="search" class="label-pesquisa" style="font-weight: bold; color: #333; font-size: 25px; margin-bottom: 5px;">Pesquisa:</label>
         <input type="search" placeholder="Pesquise por nome, telefone, email ou endereço" class="search">
         <button class="button-refresh" id="refresh">Limpar pesquisa</button>
         <div class="content" ></div>
     </div>
     <script src="main.js"></script>
+    <script src="location.js"></script>
 </body>
 </html>

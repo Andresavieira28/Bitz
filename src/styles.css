@@ -9,23 +9,32 @@ body {
 
 .container {
     display: flex;
-    justify-content: start;
+    justify-content: space-between; /* Alterado para distribuir o espaço entre os elementos */
     align-items: center;
     background-color: rgb(176, 176, 176);
     padding: 15px;
 }
 
 .logo img {
-    width: 100%; /* ajuste conforme necessário */
-    height: auto; /* para manter a proporção */
+    max-width: 100%; /* Alterado para garantir que a imagem não ultrapasse o contêiner */
+    height: auto;
 }
 
 .title h1 {
-    margin: 0; /* remova margens padrão */
+    margin: 0;
     font-size: 1.5rem;
+    color: white;
+}
+
+.datetime {
+    flex-grow: 1; /* Novo, para ocupar o espaço restante */
+    text-align: right; /* Novo, alinha o conteúdo à direita */
+}
+
+#currentDateTime {
+    font-size: 20px; /* Novo, tamanho da fonte ajustado */
     color: white; 
-    padding: 7%;/* ajuste conforme necessário */
-    width: 100%;
+    
 }
 .conteudo-api {
     display: flex;
