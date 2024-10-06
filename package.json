@@ -28,7 +28,7 @@
     "@babel/core": "^7.6.2",
     "@babel/plugin-transform-modules-commonjs": "^7.6.0",
     "babel-jest": "^27.0.1",
-    "eslint": "^8.3.0",
+    "bitz": "file:",
     "gh-pages": "^6.1.1",
     "htmlhint": "^1.0.0",
     "jest": "^27.0.1",
@@ -38,5 +38,8 @@
   },
   "engines": {
     "node": ">=16.x"
+  },
+  "devDependencies": {
+    "eslint": "^9.12.0"
   }
 }
